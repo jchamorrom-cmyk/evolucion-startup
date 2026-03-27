@@ -1,0 +1,101 @@
+/* RESET + BASE */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* BOTÓN */
+#modoOscuro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: #222;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* SECCIÓN */
+.servicios {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/*  GRID  */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* TARJETAS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* TEXTO */
+.card h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 300;
+}
+
+/*  TABLET */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*  MÓVIL */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*  MODO OSCURO */
+.dark {
+    background: #111;
+    color: #eee;
+}
+
+.dark .card {
+    background: #1e1e1e;
+}
+
+.dark .card p {
+    color: #aaa;
+}
+
+.dark #modoOscuro {
+    background: white;
+    color: black;
+}
