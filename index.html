@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Startup</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <!-- LOGO + TEXTO -->
+        <div class="logo-container">
+            <img src="img/TechCenterp.png" alt="Logo Evolución Startup">
+            <h1 class="logo">Evolución</h1>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO CON IMAGEN DE FONDO -->
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-text">
+            <h2>Impulsa tu negocio al siguiente nivel</h2>
+            <p>Soluciones digitales inteligentes para empresas pro evolución.</p>
+            <button onclick="cotizar()">Cotizar ahora</button>
+        </div>
+    </section>
+
+    <!-- SERVICIOS CON IMÁGENES -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <img src="img/imgdesarrolloweb.jpg" alt="Desarrollo web profesional">
+                <h3>Desarrollo Web</h3>
+                <p>Sitios modernos, rápidos y optimizados.</p>
+            </article>
+
+            <article class="card">
+                <img src="img/imginteligenciaartificial.jpg" alt="Inteligencia artificial avanzada">
+                <h3>Inteligencia Artificial</h3>
+                <p>Automatiza procesos con IA avanzada.</p>
+            </article>
+
+            <article class="card">
+                <img src="img/imgappsmoviles.jpg" alt="Aplicaciones móviles modernas">
+                <h3>Apps Móviles</h3>
+                <p>Aplicaciones para Android y iOS.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <p>contacto@evolucion.com</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Evolución Startup</p>
+</footer>
+
+<script>
+function cotizar() {
+    let usuarios = prompt("Ingrese número de usuarios:");
+
+    if (usuarios > 10) {
+        alert("🎉 Descuento aplicado");
+    } else {
+        alert("Precio estándar");
+    }
+}
+
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
